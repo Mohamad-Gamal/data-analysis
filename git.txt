@@ -1,0 +1,143 @@
+1. Initialize and Push to Repository
+Steps:
+
+Initialize a Git repo
+
+Add a README file
+
+Commit the changes
+
+Push to remote
+
+Commands:
+
+bash
+Copy
+Edit
+git init
+echo "# Project Title" > README.md
+git add README.md
+git commit -m "Initial commit"
+git remote add origin <remote_repo_URL>
+git push -u origin master
+✅ 2. Clone and Modify Repository
+Steps:
+
+Clone existing repo
+
+Create new branch
+
+Modify file, commit, and push branch
+
+Commands:
+
+bash
+Copy
+Edit
+git clone <repo_URL>
+cd <repo_name>
+git branch new-branch
+git checkout new-branch
+# make changes to files
+git add .
+git commit -m "Changes made on new-branch"
+git push origin new-branch
+✅ 3. Resolve Merge Conflict
+Steps:
+
+Fetch remote changes
+
+Merge into local
+
+Resolve conflicts and commit
+
+Commands:
+
+bash
+Copy
+Edit
+git fetch origin
+git merge origin/main
+# fix conflicts manually
+git status
+git add .
+git commit -m "Resolved merge conflict"
+✅ 4. Revert Changes
+Steps:
+
+Make and commit changes
+
+Revert last commit
+
+Push the updated state
+
+Commands:
+
+bash
+Copy
+Edit
+# make changes
+git add .
+git commit -m "Changes to revert"
+git revert HEAD
+git push origin main
+✅ 5. Create and Manage Pull Request
+Steps:
+
+Fork repo (from GitHub/GitLab)
+
+Clone and make changes
+
+Push and create pull request
+
+Commands (CLI using GitHub CLI):
+
+bash
+Copy
+Edit
+# Assuming fork is done through web
+git clone <your_fork_URL>
+cd repo
+# make changes
+git add .
+git commit -m "Proposed changes"
+git push origin main
+gh pr create --base original_repo:main --head your_fork:main --title "My PR" --body "Description"
+✅ 6. Stash and Apply Changes
+Steps:
+
+Stash current changes
+
+Switch branches
+
+Apply stash
+
+Commands:
+
+bash
+Copy
+Edit
+# make changes
+git stash
+git checkout other-branch
+git stash apply
+✅ 7. Tag a Release
+Steps:
+
+Prepare release changes
+
+Commit and tag version
+
+Push tag to remote
+
+Commands:
+
+bash
+Copy
+Edit
+git add .
+git commit -m "Release v1.0"
+git tag v1.0
+git push origin v1.0
+# or push all tags
+git push --tags
